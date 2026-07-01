@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikash Computer | Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">Admin Panel</div>
+            <ul class="nav-menu">
+                <li class="active" onclick="switchTab('photos')">🖼️ Manage Photos</li>
+                <li onclick="switchTab('notifications')">🔔 Notifications <span id="notifBadge" class="badge">0</span></li>
+                <li><a href="index.html" class="logout">🔙 Back to Website</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            
+            <!-- Photo Management Section -->
+            <section id="photos" class="tab-content active">
+                <h2>Manage Homepage Gallery</h2>
+                <div class="upload-area">
+                    <input type="text" id="newPhotoUrl" placeholder="Paste Image URL here (e.g., https://...)">
+                    <button class="btn btn-primary" onclick="addPhoto()">Add Photo</button>
+                </div>
+                
+                <div class="admin-gallery" id="adminGallery">
+                    <!-- Photos will be injected here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notifications" class="tab-content">
+                <h2>Customer Inquiries</h2>
+                <div class="inbox" id="inboxList">
+                    <!-- Notifications will be injected here by JavaScript -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
