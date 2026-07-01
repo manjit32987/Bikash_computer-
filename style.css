@@ -224,3 +224,92 @@ footer {
     .slide-caption { font-size: 1.3rem; }
     .badge { display: none; /* Hides the "UPDATES" text on small phones to give the links more room */ }
 }
+
+/* Make the service links look professional */
+/* Three-Column Grid Layout */
+/* Three-Column Grid */
+.services-grid-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 6%;
+}
+
+/* Card Styling */
+.service-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3b82f6;
+    color: #1e293b;
+}
+
+/* The Clickable Rows */
+.row-link {
+    display: block;
+    padding: 12px;
+    margin: 5px 0;
+    background: #f8fafc;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.row-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* 1. Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Fade-in animation for cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animation to cards */
+.service-card, .post-card {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* 3. Subtle hover effect for the whole body (optional) */
+body {
+    transition: background-color 0.5s ease;
+}
+/* Map Section Styling */
+/* Styling for the small map inside the footer */
+.footer-map {
+    max-width: 800px; /* Keep it from stretching too wide */
+    margin: 20px auto; /* Center it */
+    padding: 0 20px;
+    opacity: 0.8; /* Subtle look */
+    transition: opacity 0.3s;
+}
+
+.footer-map:hover {
+    opacity: 1; /* Brightens when user hovers */
+}
+
+/* Ensure the copyright stays below the map */
+.copyright-slim {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    margin-top: 10px;
+    color: #718096;
+}
